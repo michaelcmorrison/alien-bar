@@ -21,6 +21,11 @@ public class OrbStack : MonoBehaviour
         }
     }
 
+    public Orb[] GetStack()
+    {
+        return _orbStack.ToArray();
+    }
+    
     private void CheckStack()
     {
         if (_orbStack.Count == _stackSize)

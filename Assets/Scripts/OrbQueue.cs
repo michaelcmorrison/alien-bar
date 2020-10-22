@@ -22,13 +22,26 @@ public class OrbQueue : MonoBehaviour
             QueueOrb(_orbGenerator.GenerateRandomOrb());
         }
     }
-    
-    public void TakeOrb()
+
+    public void UseOrb()
     {
+        SoundManager.Instance.PlayClip(SoundManager.Instance.orbUse);
         _orbStack.AddToStack(DequeueOrb());
         QueueOrb(_orbGenerator.GenerateRandomOrb());
     }
-    
+
+    public void ThrowOrb()
+    {
+        SoundManager.Instance.PlayClip(SoundManager.Instance.orbThrow);
+        DequeueOrb();
+        QueueOrb(_orbGenerator.GenerateRandomOrb());
+    }
+
+    public Orb[] GetQueue()
+    {
+        return _orbQueue.ToArray();
+    }
+
     private Orb DequeueOrb()
     {
         return _orbQueue.Dequeue();
