@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c87f385049d04d4993ca44870cd6c7c0, type: 3}
   m_Name: 023
   m_EditorClassIdentifier: 
-  drinkSprite: {fileID: 0}
+  drinkSprite: {fileID: 21300000, guid: bb9ca65fb17b3184da2f25a1d89ed2af, type: 3}
   drinkId: 023
   drinkPrice: 2

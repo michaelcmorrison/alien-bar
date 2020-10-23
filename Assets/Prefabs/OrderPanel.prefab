@@ -164,8 +164,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: $10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6cd47d0b2b01e045a70033b64ed1f54, type: 2}
+  m_sharedMaterial: {fileID: -6668459008284733748, guid: b6cd47d0b2b01e045a70033b64ed1f54, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11.95
+  m_fontSize: 8.8
   m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -488,10 +488,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5dc1da50814042bb3579e4c22077dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drinkSprite: {fileID: 457585828908169531}
-  orbOneSprite: {fileID: 457585830704396833}
-  orbTwoSprite: {fileID: 457585829568497721}
-  orbThreeSprite: {fileID: 457585829942989783}
+  drinkImage: {fileID: 457585828908169531}
+  orbImages:
+  - {fileID: 457585830704396833}
+  - {fileID: 457585829568497721}
+  - {fileID: 457585829942989783}
   text: {fileID: 457585829471485824}
 --- !u!1 &457585829942989785
 GameObject:

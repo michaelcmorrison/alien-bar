@@ -21,6 +21,7 @@ public class Timer : MonoBehaviour
 
         if (time <= 0.0f)
         {
+            time = 0;
             GameManager.Instance.TriggerEndGame();
         }
         else if (TimePassedSinceLastTick() >= tickInterval)
