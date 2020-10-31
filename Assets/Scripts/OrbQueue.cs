@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class OrbQueue : MonoBehaviour
 {
-    private readonly int _queueSize = 5;
+    private const int QueueSize = 5;
     private Queue<Orb> _orbQueue;
     private OrbStack _orbStack;
     private OrbGenerator _orbGenerator;
@@ -17,7 +17,7 @@ public class OrbQueue : MonoBehaviour
     public void InitializeQueue()
     {
         _orbQueue = new Queue<Orb>();
-        for (int i = 0; i < _queueSize; i++)
+        for (var i = 0; i < QueueSize; i++)
         {
             QueueOrb(_orbGenerator.GenerateRandomOrb());
         }

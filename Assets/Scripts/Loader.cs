@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour
@@ -15,10 +13,5 @@ public class Loader : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("Title");
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
     }
 }

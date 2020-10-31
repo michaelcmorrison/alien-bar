@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class OrderList : MonoBehaviour
@@ -10,14 +11,11 @@ public class OrderList : MonoBehaviour
     {
         var foundOrder = false;
         
-        foreach (var drinkOrder in DrinkOrders)
+        foreach (var drinkOrder in DrinkOrders.Where(drinkOrder => drinkOrder.Drink.drinkId == stackId))
         {
-            if (drinkOrder.Drink.drinkId == stackId)
-            {
-                foundOrder = true;
-                CompleteOrder(drinkOrder);
-                break;
-            }
+            foundOrder = true;
+            CompleteOrder(drinkOrder);
+            break;
         }
 
         if (!foundOrder)

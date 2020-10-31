@@ -1,12 +1,11 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public bool gameRunning;
-    public float playerMoney = 0;
+    public float playerMoney;
 
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameOverMenu;
@@ -28,28 +27,30 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
+        pauseMenu.SetActive(true);
         gameRunning = false;
         Time.timeScale = 0;
-        pauseMenu.SetActive(true);
     }
 
     public void Unpause()
     {
-        Time.timeScale = 1;
-        gameRunning = true;
         pauseMenu.SetActive(false);
+        gameRunning = true;
+        Time.timeScale = 1;
     }
     
     public void TriggerEndGame()
     {
+        if (!gameRunning) return;
+        
         gameRunning = false;
         gameOverMenu.SetActive(true);
         Time.timeScale = 0;
         scoreText.text = "You made " + playerMoney.ToString("C");
-        PostHighScore(playerMoney);
+        PostHighScore();
     }
 
-    public void PostHighScore(float score)
+    private void PostHighScore()
     {
         if (PlayerPrefs.HasKey("HighScore"))
         {

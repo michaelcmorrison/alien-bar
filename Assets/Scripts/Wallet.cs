@@ -14,6 +14,6 @@ public class Wallet : MonoBehaviour
     private void Update()
     {
         string moneyString = GameManager.Instance.playerMoney.ToString("C");
-        _text.text = moneyString;
+        _text.text = "Money: " + moneyString;
     }
 }
